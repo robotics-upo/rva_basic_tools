@@ -15,7 +15,7 @@ if __name__ == '__main__':
     x = rospy.get_param(param_name = '~x', default = 1.0)
     y = rospy.get_param(param_name = '~y', default = 1.0)
     z = rospy.get_param(param_name = '~z', default = 0.0)
-    n = 1
+    n = rospy.get_param(param_name = '~n', default = 3)
     while not rospy.is_shutdown() and n > 0:
         point = PointStamped()
         point.header.frame_id = rospy.get_param("~frame", default="map")
