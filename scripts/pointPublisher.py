@@ -9,7 +9,7 @@ from geometry_msgs.msg import PoseStamped, PointStamped
 
 if __name__ == '__main__':
     
-    point_publisher = rospy.Publisher('/publish_point', PointStamped, queue_size=10, latch=True)
+    point_publisher = rospy.Publisher('/clicked_point', PointStamped, queue_size=10, latch=True)
     rospy.init_node('point_publisher', anonymous=False)  
     seq = 0
     x = rospy.get_param(param_name = '~x', default = 1.0)
