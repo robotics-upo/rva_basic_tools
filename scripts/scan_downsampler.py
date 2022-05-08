@@ -21,7 +21,7 @@ class ScanDownsampler:
         marker = Marker()
         marker.header = data.header #_id = data.header.frame_id
         marker.header.stamp = rospy.Time.now()
-        angle = 0
+        angle = data.angle_min
 
         marker.id = 0
         marker.ns = "scan_ds"
